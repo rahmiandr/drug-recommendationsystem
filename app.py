@@ -15,7 +15,7 @@ def recomendation_obat(obat, jumlah):
     similar_review = list(enumerate(cosine_sim.iloc[indexprod]))
     sorted_similar_review = sorted(similar_review, key=lambda x:x[1], reverse=True)
     aa = []
-    for i in range(1,jumlah) :
+    for i in range(0,jumlah) :
         aa.append(sorted_similar_review[i][0])
     return data.iloc[aa,:7]
 
